@@ -36,7 +36,7 @@ public @Data class ReverseAlgorithem  implements IEncryptorDecryptor {
 
 	public void action() {
 		initAlgo(chooseAlgo());
-		a.setMultipleFiles(1);
+		a.setMultipleFiles(2);
 		a.action();
 		if(action==1){
 			try {

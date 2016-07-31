@@ -105,7 +105,11 @@ public @Data abstract class SimpleAlgorithem implements IEncryptorDecryptor,Runn
 		Random rn = new Random();
 		if(this.getMultipleFiles()==1){
 			keyFromFile(this.getFilePath().getParent()+"/encrypted-decrypted/"+"key.bin");
-		}else{
+		}else if(this.getMultipleFiles()==2){
+			keyFromFile(this.getFilePath().getParent()+"/key.bin");
+		}
+		else{
+		
 			int key=Math.abs(rn.nextInt());
 			setKey(key);
 			log.info("The key that was generate is:"+getKey());
